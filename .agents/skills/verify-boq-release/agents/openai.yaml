@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verify BOQ Release"
+  short_description: "Run BOQ financial, RTL, PDF, and recovery gates"
+  default_prompt: "Use $verify-boq-release to run the full release-readiness evidence pass for this project."
