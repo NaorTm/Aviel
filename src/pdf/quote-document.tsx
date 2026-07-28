@@ -14,7 +14,7 @@ import type { DecimalString, Project, ProjectItem } from "../domain/types";
 const fontRoot =
   typeof window === "undefined" && typeof process !== "undefined"
     ? `${process.cwd().replaceAll("\\", "/")}/public/fonts/`
-    : "/fonts/";
+    : new URL("fonts/", window.location.href).href;
 
 Font.register({
   family: "NotoHebrew",

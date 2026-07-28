@@ -1,5 +1,7 @@
-import { BoqApp } from "../src/features/boq-app";
+import { BoqAppClient } from "./boq-app-client";
+
+export const dynamic = "force-static";
 
 export default function Home() {
-  return <BoqApp />;
+  return <BoqAppClient />;
 }

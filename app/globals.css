@@ -1,13 +1,13 @@
 @font-face {
   font-family: "Noto Hebrew";
-  src: url("/fonts/NotoSansHebrew-Regular.ttf") format("truetype");
+  src: url("../fonts/NotoSansHebrew-Regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
   font-family: "Noto Hebrew";
-  src: url("/fonts/NotoSansHebrew-Bold.ttf") format("truetype");
+  src: url("../fonts/NotoSansHebrew-Bold.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
 }

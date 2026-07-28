@@ -8,7 +8,7 @@ test("creates, edits, autosaves and reopens a Hebrew quotation", async ({
   await expect(page.locator("html")).toHaveAttribute("dir", "rtl");
   await expect(
     page.getByRole("heading", { name: "בוקר טוב, מתחילים הצעה חדשה?" }),
-  ).toBeVisible();
+  ).toBeVisible({ timeout: 15_000 });
   await page
     .getByRole("button", { name: "יצירת פרויקט חדש", exact: true })
     .click();

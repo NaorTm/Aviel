@@ -44,3 +44,6 @@ next-env.d.ts
 /tmp/
 /test-results/
 /playwright-report/
+
+# Local reference documents may contain client or project information.
+/*.pdf

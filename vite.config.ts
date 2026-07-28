@@ -7,6 +7,10 @@ const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   "00000000-0000-4000-8000-000000000000";
 
 const { d1, r2 } = hostingConfig;
+const isGitHubPagesBuild = process.env.GITHUB_PAGES === "true";
+const repositoryName =
+  process.env.GITHUB_REPOSITORY?.split("/").at(-1) ?? "Aviel";
+const githubPagesBase = `/${repositoryName}/`;
 
 // macOS Seatbelt blocks FSEvents, so Codex previews need polling for HMR.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
@@ -44,6 +48,7 @@ export default defineConfig(async () => {
   const { cloudflare } = await import("@cloudflare/vite-plugin");
 
   return {
+    base: isGitHubPagesBuild ? githubPagesBase : undefined,
     server: isCodexSeatbeltSandbox
       ? { watch: { useFsEvents: false, usePolling: true } }
       : undefined,
